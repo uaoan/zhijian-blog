@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="t">
+  <title id="t">写作工作流封面</title>
+  <rect width="1200" height="750" fill="#f3efe5"/>
+  <path d="M106 153h988M106 597h988" stroke="#d8d2c6" stroke-width="2"/>
+  <g font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle">
+    <circle cx="220" cy="375" r="108" fill="#153a38"/>
+    <text x="220" y="386" font-size="34" fill="#f6f3ec">收集</text>
+    <circle cx="470" cy="375" r="108" fill="#245d58"/>
+    <text x="470" y="386" font-size="34" fill="#f6f3ec">整理</text>
+    <circle cx="720" cy="375" r="108" fill="#ee704e"/>
+    <text x="720" y="386" font-size="34" fill="#fffdf8">成稿</text>
+    <circle cx="970" cy="375" r="108" fill="#f1b39d"/>
+    <text x="970" y="386" font-size="34" fill="#153a38">发布</text>
+  </g>
+  <path d="M328 375h34m216 0h34m216 0h34" stroke="#153a38" stroke-width="8" stroke-linecap="round"/>
+</svg>

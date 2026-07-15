@@ -1,0 +1,25 @@
+title: "纸间"
+tagline: 把复杂的想法，写成清晰的文章
+description: 一个简洁、响应式、支持 Decap CMS 后台的 GitHub Pages 博客模板。
+url: "https://uaoan.github.io"
+baseurl: "/uaoan"
+lang: zh-CN
+timezone: Asia/Shanghai
+
+author:
+  name: "uaoan"
+  bio: 记录设计、技术与生活中的长期思考。
+  email: "1823565614@qq.com"
+
+permalink: /blog/:title/
+markdown: kramdown
+highlighter: rouge
+future: false
+show_excerpts: true
+
+exclude:
+  - README.md
+  - SETUP.md
+  - setup.py
+  - LICENSE
+  - zhijian-blog.zip

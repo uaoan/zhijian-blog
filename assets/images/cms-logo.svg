@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100">
+  <rect width="100" height="100" rx="30" fill="#153a38"/>
+  <text x="50" y="68" text-anchor="middle" font-family="serif" font-size="54" font-weight="700" fill="#f6f3ec">纸</text>
+  <text x="122" y="62" font-family="system-ui,sans-serif" font-size="34" font-weight="700" fill="#153a38">纸间</text>
+  <text x="124" y="83" font-family="system-ui,sans-serif" font-size="13" fill="#667170">CONTENT STUDIO</text>
+</svg>

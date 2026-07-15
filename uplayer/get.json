@@ -1,0 +1,18 @@
+{
+  "title": "优影阁",
+  "linkList": [
+    {
+      "name": "接口1",
+      "url": "http://play.uaoan.pw"
+    },{
+      "name": "接口2",
+      "url": "http://uaoan.dns520.ccwu.cc"
+    },{
+      "name": "接口3",
+      "url": "https://uaoan.cn"
+    },{
+      "name": "接口4",
+      "url": "http://139.196.181.55:3333/"
+    }
+  ]
+}

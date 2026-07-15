@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title">
+  <title>作者头像占位图</title>
+  <rect width="500" height="500" rx="210" fill="#e9e4d9"/>
+  <circle cx="250" cy="198" r="92" fill="#f1b39d"/>
+  <path d="M145 185c15-90 183-132 222-2-40-20-63-54-72-90-44 43-100 66-150 92Z" fill="#153a38"/>
+  <path d="M116 500c8-119 61-190 134-190s129 71 134 190Z" fill="#245d58"/>
+  <circle cx="216" cy="202" r="7" fill="#153a38"/>
+  <circle cx="287" cy="202" r="7" fill="#153a38"/>
+  <path d="M221 247c22 17 42 17 62 0" fill="none" stroke="#153a38" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="409" cy="95" r="35" fill="#ee704e"/>
+</svg>

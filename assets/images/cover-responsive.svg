@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="t">
+  <title id="t">响应式设计封面</title>
+  <rect width="1200" height="750" fill="#153a38"/>
+  <rect x="130" y="125" width="610" height="430" rx="28" fill="#fffdf8"/>
+  <rect x="790" y="205" width="240" height="410" rx="34" fill="#f3efe5"/>
+  <rect x="177" y="178" width="230" height="22" rx="11" fill="#ee704e"/>
+  <rect x="177" y="228" width="472" height="15" rx="7" fill="#d4d0c7"/>
+  <rect x="177" y="266" width="410" height="15" rx="7" fill="#d4d0c7"/>
+  <rect x="177" y="330" width="210" height="160" rx="18" fill="#245d58"/>
+  <rect x="414" y="330" width="210" height="160" rx="18" fill="#e9e4d9"/>
+  <rect x="829" y="258" width="132" height="17" rx="8" fill="#ee704e"/>
+  <rect x="829" y="300" width="160" height="11" rx="5" fill="#c9c6bd"/>
+  <rect x="829" y="332" width="140" height="11" rx="5" fill="#c9c6bd"/>
+  <rect x="829" y="384" width="160" height="126" rx="16" fill="#245d58"/>
+</svg>

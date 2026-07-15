@@ -1,0 +1,118 @@
+[
+  {
+    "path": "404.html",
+    "bytes": 382
+  },
+  {
+    "path": "LICENSE",
+    "bytes": 797
+  },
+  {
+    "path": "README.md",
+    "bytes": 1342
+  },
+  {
+    "path": "SETUP.md",
+    "bytes": 3973
+  },
+  {
+    "path": "_config.yml",
+    "bytes": 569
+  },
+  {
+    "path": "_includes/footer.html",
+    "bytes": 689
+  },
+  {
+    "path": "_includes/header.html",
+    "bytes": 1343
+  },
+  {
+    "path": "_includes/post-card.html",
+    "bytes": 1609
+  },
+  {
+    "path": "_layouts/default.html",
+    "bytes": 2018
+  },
+  {
+    "path": "_layouts/post.html",
+    "bytes": 2494
+  },
+  {
+    "path": "_posts/2026-06-30-writing-workflow.md",
+    "bytes": 1697
+  },
+  {
+    "path": "_posts/2026-07-08-responsive-design.md",
+    "bytes": 1644
+  },
+  {
+    "path": "_posts/2026-07-14-build-a-calm-blog.md",
+    "bytes": 2501
+  },
+  {
+    "path": "about/index.html",
+    "bytes": 1982
+  },
+  {
+    "path": "admin/config.yml",
+    "bytes": 2162
+  },
+  {
+    "path": "admin/index.html",
+    "bytes": 656
+  },
+  {
+    "path": "assets/css/style.css",
+    "bytes": 25414
+  },
+  {
+    "path": "assets/images/avatar.svg",
+    "bytes": 689
+  },
+  {
+    "path": "assets/images/cms-logo.svg",
+    "bytes": 480
+  },
+  {
+    "path": "assets/images/cover-calm.svg",
+    "bytes": 687
+  },
+  {
+    "path": "assets/images/cover-responsive.svg",
+    "bytes": 1002
+  },
+  {
+    "path": "assets/images/cover-workflow.svg",
+    "bytes": 960
+  },
+  {
+    "path": "assets/images/uploads/.gitkeep",
+    "bytes": 0
+  },
+  {
+    "path": "assets/js/main.js",
+    "bytes": 5592
+  },
+  {
+    "path": "blog/index.html",
+    "bytes": 1774
+  },
+  {
+    "path": "feed.xml",
+    "bytes": 1044
+  },
+  {
+    "path": "index.html",
+    "bytes": 3359
+  },
+  {
+    "path": "setup.py",
+    "bytes": 2078
+  },
+  {
+    "path": "sitemap.xml",
+    "bytes": 480
+  }
+]

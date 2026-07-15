@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p>{{ site.description }}</p>
+    </div>
+    <div class="footer-links">
+      <a href="{{ '/blog/' | relative_url }}">全部文章</a>
+      <a href="{{ '/about/' | relative_url }}">关于作者</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a href="{{ '/admin/' | relative_url }}">内容后台</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> {{ site.title }}</span>
+    <span>静态生成 · Git 驱动 · 响应式设计</span>
+  </div>
+</footer>

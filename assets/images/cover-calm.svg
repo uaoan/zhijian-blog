@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t">
+  <title id="t">安静的个人博客封面</title>
+  <rect width="1200" height="900" fill="#e9e4d9"/>
+  <circle cx="978" cy="140" r="74" fill="#ee704e"/>
+  <path d="M82 788C182 490 325 250 630 164c231-66 403 26 492 186-184-38-318 2-431 117-132 134-273 239-609 321Z" fill="#153a38"/>
+  <path d="M84 788c224-70 383-176 487-331 93-139 203-207 407-221-134 92-203 216-242 371-25 99-69 155-151 181Z" fill="#245d58"/>
+  <rect x="118" y="112" width="350" height="42" rx="21" fill="#fffdf8" opacity=".86"/>
+  <rect x="118" y="174" width="235" height="20" rx="10" fill="#fffdf8" opacity=".5"/>
+</svg>

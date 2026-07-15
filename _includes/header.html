@@ -1,0 +1,25 @@
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}首页">
+      <span class="brand-mark" aria-hidden="true">纸</span>
+      <span class="brand-copy">
+        <strong>{{ site.title }}</strong>
+        <small>{{ site.tagline }}</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="主导航" data-nav>
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>首页</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' and page.layout != 'post' %}aria-current="page"{% endif %}>文章</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}aria-current="page"{% endif %}>关于</a>
+      <a class="admin-link" href="{{ '/admin/' | relative_url }}">写文章</a>
+      <button class="theme-toggle" type="button" aria-label="切换深浅色模式" title="切换深浅色模式" data-theme-toggle>
+        <span class="theme-icon" aria-hidden="true">◐</span>
+      </button>
+    </nav>
+  </div>
+</header>

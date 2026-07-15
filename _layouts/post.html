@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <header class="post-hero">
+    <div class="container post-hero-grid">
+      <div class="post-hero-copy">
+        <a class="eyebrow-link" href="{{ '/blog/' | relative_url }}">← 返回全部文章</a>
+        <div class="post-meta post-meta-large">
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
+          <span>{{ page.author | default: site.author.name }}</span>
+          <span data-reading-time>约 1 分钟阅读</span>
+        </div>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}<p class="post-deck">{{ page.description }}</p>{% endif %}
+        {% if page.tags %}
+          <div class="tag-row tag-row-large">
+            {% for tag in page.tags %}<span>#{{ tag }}</span>{% endfor %}
+          </div>
+        {% endif %}
+      </div>
+      {% if page.cover %}
+        <figure class="post-cover">
+          <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+        </figure>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="container article-shell">
+    <aside class="article-aside" aria-label="文章信息">
+      <div class="aside-card">
+        <span class="aside-label">作者</span>
+        <strong>{{ page.author | default: site.author.name }}</strong>
+        <p>{{ site.author.bio }}</p>
+      </div>
+      <div class="aside-card">
+        <span class="aside-label">分享</span>
+        <button class="copy-link" type="button" data-copy-link>复制文章链接</button>
+      </div>
+    </aside>
+
+    <div class="post-content" data-post-content>
+      {% assign image_prefix = 'src="' | append: site.baseurl | append: '/assets/' %}
+      {% assign file_prefix = 'href="' | append: site.baseurl | append: '/assets/' %}
+      {{ content | replace: 'src="/assets/', image_prefix | replace: 'href="/assets/', file_prefix }}
+    </div>
+  </div>
+
+  <nav class="container post-navigation" aria-label="文章翻页">
+    {% if page.previous %}
+      <a href="{{ page.previous.url | relative_url }}">
+        <span>上一篇</span>
+        <strong>{{ page.previous.title }}</strong>
+      </a>
+    {% else %}<span></span>{% endif %}
+    {% if page.next %}
+      <a href="{{ page.next.url | relative_url }}">
+        <span>下一篇</span>
+        <strong>{{ page.next.title }}</strong>
+      </a>
+    {% endif %}
+  </nav>
+</article>

@@ -1,0 +1,51 @@
+---
+layout: default
+title: 全部文章
+description: 浏览纸间发布的全部文章，并按标题、摘要或标签筛选。
+permalink: /blog/
+---
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div>
+      <p class="eyebrow"><span></span> Archive</p>
+      <h1>全部文章</h1>
+      <p>从设计方法到技术实践，从工具选择到生活观察。用搜索和标签快速找到你需要的内容。</p>
+    </div>
+    <div class="archive-count">
+      <strong>{{ site.posts | size }}</strong>
+      <span>篇公开文章</span>
+    </div>
+  </div>
+</section>
+
+<section class="section archive-section">
+  <div class="container">
+    <div class="filter-bar">
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <span class="sr-only">搜索文章</span>
+        <input type="search" placeholder="搜索标题、摘要或标签…" autocomplete="off" data-post-search>
+      </label>
+      <div class="filter-tags" data-filter-tags>
+        <button class="is-active" type="button" data-filter="all">全部</button>
+        {% assign all_tags = site.tags | sort %}
+        {% for tag in all_tags limit: 8 %}
+          <button type="button" data-filter="{{ tag[0] | escape }}">{{ tag[0] }}</button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <p class="results-note" data-results-note>显示全部 {{ site.posts | size }} 篇文章</p>
+
+    <div class="post-grid archive-grid" data-post-grid>
+      {% for post in site.posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+
+    <div class="empty-state" hidden data-empty-state>
+      <span>没有找到匹配的文章</span>
+      <p>换一个关键词，或选择“全部”标签。</p>
+    </div>
+  </div>
+</section>
