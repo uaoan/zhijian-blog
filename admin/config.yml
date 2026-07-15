@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: uaoan/uaoan
+  repo: uaoan/zhijian-blog
   branch: main
   base_url: https://YOUR-OAUTH-PROXY.workers.dev
   auth_endpoint: /auth
@@ -9,10 +9,10 @@ backend:
 local_backend: true
 publish_mode: editorial_workflow
 
-site_url: https://uaoan.github.io/uaoan
-display_url: https://uaoan.github.io/uaoan
+site_url: https://uaoan.github.io/zhijian-blog
+display_url: https://uaoan.github.io/zhijian-blog
 logo:
-  src: https://uaoan.github.io/uaoan/assets/images/cms-logo.svg
+  src: https://uaoan.github.io/zhijian-blog/assets/images/cms-logo.svg
   show_in_header: true
 
 media_folder: "assets/images/uploads"
@@ -40,7 +40,7 @@ collections:
     fields:
       - { label: "标题", name: "title", widget: "string", hint: "建议不超过 30 个汉字" }
       - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss Z", date_format: "YYYY-MM-DD", time_format: "HH:mm" }
-      - { label: "作者", name: "author", widget: "string", default: "uaoan" }
+      - { label: "作者", name: "author", widget: "string", default: "你的名字" }
       - { label: "摘要", name: "description", widget: "text", hint: "用于首页卡片和搜索结果，建议 60—100 字" }
       - { label: "封面图", name: "cover", widget: "image", required: false, choose_url: false, media_library: { config: { multiple: false } } }
       - { label: "分类", name: "categories", widget: "list", default: ["随笔"], allow_add: true }

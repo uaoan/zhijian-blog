@@ -1,15 +1,15 @@
-title: "纸间"
+title: 纸间
 tagline: 把复杂的想法，写成清晰的文章
 description: 一个简洁、响应式、支持 Decap CMS 后台的 GitHub Pages 博客模板。
 url: "https://uaoan.github.io"
-baseurl: "/uaoan"
+baseurl: "/zhijian-blog"
 lang: zh-CN
 timezone: Asia/Shanghai
 
 author:
-  name: "uaoan"
+  name: 你的名字
   bio: 记录设计、技术与生活中的长期思考。
-  email: "1823565614@qq.com"
+  email: hello@example.com
 
 permalink: /blog/:title/
 markdown: kramdown
