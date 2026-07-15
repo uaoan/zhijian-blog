@@ -3,15 +3,179 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="color-scheme" content="light">
   <title>内容后台 · 纸间</title>
-  <style>
-    html,body{margin:0;min-height:100%;background:#f6f3ec;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .cms-loading{position:fixed;inset:0;display:grid;place-items:center;color:#153a38;letter-spacing:.08em}
-  </style>
+  <link rel="stylesheet" href="./admin.css">
 </head>
 <body>
-  <div class="cms-loading">正在加载内容后台…</div>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <main class="admin-shell">
+    <section class="login-view" data-login-view>
+      <div class="login-card">
+        <a class="brand" href="../" aria-label="返回博客首页">
+          <span class="brand-mark">纸</span>
+          <span><strong>纸间</strong><small>OFFLINE CONTENT STUDIO</small></span>
+        </a>
+
+        <div class="login-heading">
+          <p class="eyebrow">ADMIN LOGIN</p>
+          <h1>登录内容后台</h1>
+          <p>登录后可创建文章、添加图片，并导出可上传到 GitHub 的内容包。</p>
+        </div>
+
+        <form class="login-form" data-login-form>
+          <label>
+            <span>管理员账号</span>
+            <input name="username" type="text" autocomplete="username" required autofocus>
+          </label>
+          <label>
+            <span>管理员密码</span>
+            <div class="password-field">
+              <input name="password" type="password" autocomplete="current-password" required>
+              <button type="button" data-toggle-password aria-label="显示或隐藏密码">显示</button>
+            </div>
+          </label>
+          <p class="form-message" role="status" data-login-message></p>
+          <button class="primary-button" type="submit" data-login-button>登录</button>
+        </form>
+
+        <p class="security-note">纯静态页面无法提供服务器级密码保护；此登录只用于阻止普通误入，页面中不保存 GitHub Token。</p>
+      </div>
+    </section>
+
+    <section class="editor-view" data-editor-view hidden>
+      <header class="editor-header">
+        <a class="brand brand-small" href="../">
+          <span class="brand-mark">纸</span>
+          <span><strong>纸间后台</strong><small>离线文章编辑器</small></span>
+        </a>
+        <div class="header-actions">
+          <a href="../" target="_blank" rel="noopener">查看网站</a>
+          <button type="button" class="ghost-button" data-logout>退出登录</button>
+        </div>
+      </header>
+
+      <div class="editor-layout">
+        <aside class="editor-sidebar">
+          <p class="eyebrow">EXPORT</p>
+          <h1>创建文章</h1>
+          <p>填写文章内容后导出 ZIP。解压后把其中的文件上传到 GitHub 仓库即可发布。</p>
+          <div class="sidebar-steps">
+            <div><span>01</span><p><strong>填写信息</strong><small>标题、摘要、分类和标签</small></p></div>
+            <div><span>02</span><p><strong>添加内容</strong><small>Markdown 正文、封面和插图</small></p></div>
+            <div><span>03</span><p><strong>导出上传</strong><small>将 ZIP 内容提交到 GitHub</small></p></div>
+          </div>
+        </aside>
+
+        <form class="post-form" data-post-form>
+          <section class="form-card">
+            <div class="section-title">
+              <div><span>基础信息</span><h2>文章资料</h2></div>
+              <span class="save-state" data-save-state>尚未保存</span>
+            </div>
+
+            <label class="field field-wide">
+              <span>文章标题 <b>*</b></span>
+              <input name="title" type="text" maxlength="80" placeholder="输入清晰、具体的文章标题" required>
+            </label>
+
+            <div class="field-grid">
+              <label class="field">
+                <span>发布日期 <b>*</b></span>
+                <input name="date" type="datetime-local" required>
+              </label>
+              <label class="field">
+                <span>作者</span>
+                <input name="author" type="text" value="你的名字">
+              </label>
+            </div>
+
+            <label class="field field-wide">
+              <span>文章摘要 <b>*</b></span>
+              <textarea name="description" rows="3" maxlength="240" placeholder="用于首页卡片和搜索结果，建议 60—100 字" required></textarea>
+            </label>
+
+            <div class="field-grid">
+              <label class="field">
+                <span>分类</span>
+                <input name="categories" type="text" value="随笔" placeholder="多个分类用英文逗号分隔">
+              </label>
+              <label class="field">
+                <span>标签</span>
+                <input name="tags" type="text" placeholder="例如：设计, CSS, 写作">
+              </label>
+            </div>
+
+            <label class="check-field">
+              <input name="featured" type="checkbox">
+              <span><strong>设为首页精选文章</strong><small>首页会优先展示最新的精选文章。</small></span>
+            </label>
+          </section>
+
+          <section class="form-card">
+            <div class="section-title">
+              <div><span>视觉内容</span><h2>文章封面</h2></div>
+              <button type="button" class="text-button" data-remove-cover hidden>移除封面</button>
+            </div>
+
+            <label class="cover-uploader" data-cover-drop>
+              <input name="cover" type="file" accept="image/jpeg,image/png,image/webp,image/gif" hidden>
+              <span class="cover-empty" data-cover-empty>
+                <b>＋</b>
+                <strong>点击选择封面图片</strong>
+                <small>支持 JPG、PNG、WebP、GIF，最大 5 MB</small>
+              </span>
+              <img data-cover-preview alt="封面预览" hidden>
+            </label>
+          </section>
+
+          <section class="form-card body-card">
+            <div class="section-title body-title">
+              <div><span>正文</span><h2>Markdown 编辑器</h2></div>
+              <div class="body-tools">
+                <input type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden data-body-image-input>
+                <button type="button" class="ghost-button" data-add-body-image>添加正文图片</button>
+              </div>
+            </div>
+
+            <div class="markdown-help">
+              <code>## 二级标题</code>
+              <code>**加粗**</code>
+              <code>- 列表</code>
+              <code>[链接](地址)</code>
+            </div>
+
+            <div class="image-queue" data-image-queue hidden>
+              <strong>已加入导出包的正文图片</strong>
+              <div data-image-list></div>
+            </div>
+
+            <label class="field field-wide body-field">
+              <span class="sr-only">文章正文</span>
+              <textarea name="body" rows="22" placeholder="# 从这里开始写作……" required data-body-editor></textarea>
+            </label>
+          </section>
+
+          <section class="export-help">
+            <strong>导出后怎么发布？</strong>
+            <p>解压 ZIP，把 <code>_posts</code> 中的文章上传到仓库同名目录；把 <code>assets/images/uploads</code> 中的图片上传到仓库同名目录。提交后 GitHub Pages 会自动重新构建。</p>
+          </section>
+
+          <div class="publish-bar">
+            <div>
+              <p class="publish-message" role="status" data-publish-message></p>
+              <small>所有处理都在当前浏览器完成，不会上传账号密码或图片到第三方服务器。</small>
+            </div>
+            <div class="publish-actions">
+              <button type="button" class="ghost-button" data-clear-draft>清空草稿</button>
+              <button type="submit" class="primary-button publish-button" data-export-button>导出发布包</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="./admin.js" defer></script>
 </body>
 </html>

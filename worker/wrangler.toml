@@ -1,0 +1,10 @@
+name = "zhijian-blog-admin"
+main = "src/index.js"
+compatibility_date = "2026-07-15"
+workers_dev = true
+
+[vars]
+GITHUB_OWNER = "uaoan"
+GITHUB_REPO = "zhijian-blog"
+GITHUB_BRANCH = "main"
+ALLOWED_ORIGINS = "https://uaoan.github.io,http://127.0.0.1:4000,http://localhost:4000"
